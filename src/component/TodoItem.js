@@ -4,6 +4,11 @@ import classNames from 'classnames';
 import "../styles/TodoItem.css"
 
 class TodoItem extends React.Component{
+
+    sholudComponentUpdate( newxtProps, nextState){
+        return this.props.done !== newxtProps.done;
+    }
+    
     render(){
         const {done, children, onToggle, onRemove} = this.props;
 
